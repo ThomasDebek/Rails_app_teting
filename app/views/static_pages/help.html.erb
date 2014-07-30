@@ -1,2 +1,13 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<% provide(:title, 'Help') %>
+
+<div id="help">
+  <%= form_tag do %>
+      <fieldset>
+        <legend><h1>Help</h1></legend>
+        <div>
+          <p><strong><%= link_to "Web development that doesn't hurt", 'http://www.rubyonrails.org ' %></strong></p>
+        </div>
+
+      </fieldset>
+  <% end %>
+</div>
