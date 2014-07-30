@@ -8,8 +8,8 @@ describe "StaticPages" do
     before { visit root_path }
 
     it { should have_content('Find a place on earth.') }
-    it { should have_title("RailsApp") }
-    it { should have_title('| Home') }
+    it { should have_title("RailsAppTesting") }
+    
   end
 
 
