@@ -1,14 +1,8 @@
- <% if notice %>
+<% if notice %>
     <p id="notice"><%= notice %></p>
 <% end %>
 
-<% if @cart.line_items.empty? %>
-   <p></p>
- <% else %>
-    <div id="cart">
-      <%= render 'carts/cart' %>
-    </div>
-<% end %>
+
 
 <h1>List your Hotels </h1>
 
@@ -24,7 +18,7 @@
             <dd><%= truncate(strip_tags(place.description), length: 580) %></dd>
             <div class="price_line">
               <span class="price"><%= number_to_currency(place.price) %></span>
-              <%= button_to 'Add to Cart', 'line_items_path'(place_id: place), class: "btn btn-small btn-primary" %>
+              <%= button_to 'Add to Cart', 'line_items_path(place_id: place)', class: "btn btn-small btn-primary" %>
             </div>
           </dl>
         </td>
